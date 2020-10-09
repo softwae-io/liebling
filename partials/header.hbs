@@ -29,15 +29,15 @@ This header template is shared across all the pages.
       <div class="l-wrapper">
         <div class="m-nav js-main-nav">
           <nav class="m-nav__left js-main-nav-left" role="navigation" aria-label="{{t "Main menu"}}">
-            <ul>
+            <ul style="width: 100%;">
               {{#if @site.logo}}
-                <li class="only-desktop">
+                <li class="only-desktop" style="margin-right: auto;">
                   <a href="{{@site.url}}" class="m-logo">
                     <img src="{{@site.logo}}" alt="{{@site.title}}">
                   </a>
                 </li>
                 {{else}}
-                <li class="only-desktop">
+                <li class="only-desktop" style="margin-right: auto;">
                   <a href="{{@site.url}}" class="m-site-name in-desktop-menu">
                     {{@site.title}}
                   </a>
@@ -47,7 +47,7 @@ This header template is shared across all the pages.
                 {{navigation}}
               {{/if}}
               {{#if @site.secondary_navigation}}
-                <li class="more">
+                <li class="more" >
                   <span>
                     <a href="javascript:void(0);" class="js-open-secondary-menu">
                       {{t "More"}}
